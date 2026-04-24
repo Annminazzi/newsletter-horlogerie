@@ -13,7 +13,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/articles')
+    fetch('/api/articles')
       .then(res => res.json())
       .then(data => {
         setArticles(data);

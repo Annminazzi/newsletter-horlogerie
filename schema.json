@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Article",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "summary": { "type": "string" },
+    "imageURL": { "type": "string" },
+    "sourceURL": { "type": "string" },
+    "category": { "type": "string" },
+    "type": { "type": "string", "enum": ["Vidéo", "Article"] },
+    "date": { "type": "string", "format": "date-time" }
+  },
+  "required": ["id", "title", "summary", "imageURL", "sourceURL", "category", "type", "date"]
+}

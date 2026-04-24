@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1776975056727",
+    "title": "Test depuis n8n (Webhook simulé)",
+    "summary": "Cet article a été envoyé via l'API. L'image a été extraite dynamiquement depuis le HTML.",
+    "imageURL": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://example.com/n8n-test",
+    "category": "Test API",
+    "type": "Article",
+    "date": "2026-04-23T20:10:56.727Z"
+  },
+  {
+    "id": "1",
+    "title": "Le Renouveau de la Patek Philippe Nautilus",
+    "summary": "Une analyse détaillée des dernières modifications apportées à l'icône de Patek Philippe. Découvrons les nuances du nouveau cadran et les ajustements du mouvement.",
+    "imageURL": "https://images.unsplash.com/photo-1548171915-e7afaca00af8?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://hodinkee.com",
+    "category": "Analyse",
+    "type": "Article",
+    "date": "2026-04-18T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Dans l'Atelier d'un Horloger Indépendant",
+    "summary": "Rencontre exclusive avec un maître horloger qui redéfinit les codes de la haute horlogerie contemporaine à travers des créations uniques et complexes.",
+    "imageURL": "https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://monochrome-watches.com",
+    "category": "Savoir-faire",
+    "type": "Vidéo",
+    "date": "2026-04-15T14:30:00Z"
+  },
+  {
+    "id": "3",
+    "title": "Rolex Daytona : L'Évolution d'un Mythe",
+    "summary": "Retour sur l'histoire fascinante du chronographe le plus convoité au monde, de ses débuts modestes à son statut de légende absolue.",
+    "imageURL": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://fr.rolex.com",
+    "category": "Vintage",
+    "type": "Article",
+    "date": "2026-04-10T09:15:00Z"
+  },
+  {
+    "id": "4",
+    "title": "L'Art de l'Émaillage Grand Feu",
+    "summary": "Une plongée visuelle dans les techniques ancestrales utilisées pour créer les cadrans les plus exquis de l'industrie horlogère.",
+    "imageURL": "https://images.unsplash.com/photo-1612817288484-6f916006741a?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://thewatchestv.com",
+    "category": "Artisanat",
+    "type": "Vidéo",
+    "date": "2026-04-05T16:45:00Z"
+  },
+  {
+    "id": "5",
+    "title": "Innovations Matérielles : L'Ère du Carbone",
+    "summary": "Comment les matériaux composites transforment la résistance et le poids des montres sportives de luxe sans compromettre l'esthétique.",
+    "imageURL": "https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://revolutionwatch.com",
+    "category": "Innovation",
+    "type": "Article",
+    "date": "2026-04-01T11:20:00Z"
+  },
+  {
+    "id": "6",
+    "title": "F.P. Journe et la Quête de la Précision",
+    "summary": "Exploration des mécanismes ingénieux développés par François-Paul Journe pour repousser les limites de la chronométrie.",
+    "imageURL": "https://images.unsplash.com/photo-1622434641406-a158123450f9?q=80&w=1000&auto=format&fit=crop",
+    "sourceURL": "https://youtube.com",
+    "category": "Haute Horlogerie",
+    "type": "Vidéo",
+    "date": "2026-03-28T18:00:00Z"
+  }
+]

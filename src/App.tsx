@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect } from 'react';
+import { supabase } from './lib/supabaseClient';
 import { Header } from './components/Header';
 import { FilterBar } from './components/FilterBar';
 import type { FilterType } from './components/FilterBar';
@@ -13,16 +14,28 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/articles')
-      .then(res => res.json())
-      .then(data => {
-        setArticles(data);
+    const fetchArticles = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('articles')
+          .select('*')
+          .order('date', { ascending: false });
+
+        if (error) {
+          throw error;
+        }
+
+        if (data) {
+          setArticles(data as Article[]);
+        }
+      } catch (err) {
+        console.error("Error fetching articles from Supabase:", err);
+      } finally {
         setLoading(false);
-      })
-      .catch(err => {
-        console.error("Error fetching articles:", err);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchArticles();
   }, []);
 
   const handleToggleSave = (id: string) => {

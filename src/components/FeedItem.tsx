@@ -47,12 +47,17 @@ export const FeedItem: React.FC<FeedItemProps> = ({ article, index, isSaved, onT
           <span className="text-[var(--color-gold)] text-xs font-sans font-semibold tracking-widest uppercase mb-2">
             {article.category} • {article.type}
           </span>
+          {/* Debug/Fallback pour la date */}
           <span className="text-xs text-gray-400 font-sans tracking-wide">
-            {new Date(article.date).toLocaleDateString('fr-FR', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric'
-            })}
+            {(article.date || (article as any).created_at) ? (
+              new Date(article.date || (article as any).created_at).toLocaleDateString('fr-FR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+              })
+            ) : (
+              'Date non spécifiée'
+            )}
           </span>
         </div>
 

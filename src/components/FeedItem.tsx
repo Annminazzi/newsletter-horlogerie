@@ -17,7 +17,7 @@ export const FeedItem: React.FC<FeedItemProps> = ({ article, index, isSaved, onT
   return (
     <article className="w-full flex flex-col md:flex-row items-center gap-8 md:gap-16 py-12 md:py-24 border-b border-gray-100 last:border-0 group">
       {/* Image Container */}
-      <div 
+      <div
         className={clsx(
           "w-full md:w-1/2 overflow-hidden bg-gray-100 aspect-[4/3] md:aspect-square",
           isEven ? "md:order-1" : "md:order-2"
@@ -37,24 +37,33 @@ export const FeedItem: React.FC<FeedItemProps> = ({ article, index, isSaved, onT
       </div>
 
       {/* Content Container */}
-      <div 
+      <div
         className={clsx(
           "w-full md:w-1/2 flex flex-col justify-center",
           isEven ? "md:order-2" : "md:order-1"
         )}
       >
-        <span className="text-[var(--color-gold)] text-xs font-sans font-semibold tracking-widest uppercase mb-4">
-          {article.category} • {article.type}
-        </span>
-        
+        <div className="flex flex-col mb-4">
+          <span className="text-[var(--color-gold)] text-xs font-sans font-semibold tracking-widest uppercase mb-2">
+            {article.category} • {article.type}
+          </span>
+          <span className="text-xs text-gray-400 font-sans tracking-wide">
+            {new Date(article.date).toLocaleDateString('fr-FR', {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric'
+            })}
+          </span>
+        </div>
+
         <h2 className="text-3xl md:text-4xl font-serif text-[var(--color-charcoal)] mb-6 leading-tight">
           {article.title}
         </h2>
-        
+
         <p className="text-gray-500 font-sans text-base md:text-lg leading-relaxed mb-8 font-light">
           {article.summary}
         </p>
-        
+
         <div className="flex items-center space-x-6">
           <a
             href={article.sourceURL}
@@ -65,7 +74,7 @@ export const FeedItem: React.FC<FeedItemProps> = ({ article, index, isSaved, onT
             Learn More
             <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-          
+
           <button
             onClick={() => onToggleSave(article.id)}
             className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 hover:border-[var(--color-gold)] hover:text-[var(--color-gold)] transition-colors duration-300 focus:outline-none"
